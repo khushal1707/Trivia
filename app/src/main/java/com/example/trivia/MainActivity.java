@@ -109,8 +109,6 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
                 updateque();
                 break;
             case R.id.next_button:
-
-
                 questionIndex = (questionIndex+1)%questionList.size();
                 updateque();
                 break;
@@ -186,6 +184,8 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
             @Override
             public void onAnimationEnd(Animation animation) {
                 cardView.setBackgroundColor(Color.WHITE);
+                questionIndex = (questionIndex+1)%questionList.size();
+                updateque();
             }
 
             @Override
@@ -214,6 +214,8 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
             @Override
             public void onAnimationEnd(Animation animation) {
                 cardView.setBackgroundColor(Color.WHITE);
+                questionIndex = (questionIndex+1)%questionList.size();
+                updateque();
             }
 
             @Override
